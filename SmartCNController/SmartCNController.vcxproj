@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.61030.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;USING_CBANG;HAVE_OPENSSL;HAVE_EXPAT;XML_STATIC;BOOST_ALL_NO_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;C:\build\cbang\src;C:\build\boost_1_57_0;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;C:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src;C:\build\cairo\include;C:\build\freetype\include;C:\build\freetype\include\freetype2;C:\build\v8\depot_tools\v8\include;C:\build\glew-1.12.0\source\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\build\cbang\lib;C:\build\boost_1_57_0\stage\lib;C:\build\openssl-1.0.2a\lib\VC;C:\build\glew-1.12.0\source\lib\Debug\Win32;C:\build\cairo\lib;C:\build\freetype\lib;C:\build\v8\depot_tools\v8\build\Debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;Qt5Widgetsd.lib;cbang.lib;event.lib;expat.lib;sqlite3.lib;z.lib;ws2_32.lib;libboost_filesystem.lib;libboost_iostreams.lib;libboost_regex.lib;libboost_system.lib;glew32d.lib;cairo.lib;freetype.lib;v8_base.lib;WINMM.LIB;v8_snapshot.lib;libeay32MDd.lib;ssleay32MDd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;C:\build\cbang\src;C:\build\boost_1_57_0;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\build\cbang\lib;C:\build\boost_1_57_0\stage\lib;C:\build\openssl-1.0.2a\lib\VC;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5Widgets.lib;cbang.lib;event.lib;expat.lib;sqlite3.lib;z.lib;ws2_32.lib;libboost_filesystem.lib;libboost_iostreams.lib;libboost_regex.lib;libboost_system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_AboutDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DonateDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FileTabManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GLView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_NCEdit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ProjectModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QtWin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_qtwin.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_AboutDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DonateDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FileTabManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GLView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_NCEdit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ProjectModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QtWin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\clipper\clipper.cpp" />
+    <ClCompile Include="src\contour\CellSlice.cpp" />
+    <ClCompile Include="src\contour\CompositeSurface.cpp" />
+    <ClCompile Include="src\contour\ContourGenerator.cpp" />
+    <ClCompile Include="src\contour\DualContouring.cpp" />
+    <ClCompile Include="src\contour\ElementSurface.cpp" />
+    <ClCompile Include="src\contour\FieldFunction.cpp" />
+    <ClCompile Include="src\contour\HermiteData.cpp" />
+    <ClCompile Include="src\contour\HermiteSlice.cpp" />
+    <ClCompile Include="src\contour\MarchingCubes.cpp" />
+    <ClCompile Include="src\contour\QEF.cpp" />
+    <ClCompile Include="src\contour\SampleSlice.cpp" />
+    <ClCompile Include="src\contour\Surface.cpp" />
+    <ClCompile Include="src\cutsim\AABB.cpp" />
+    <ClCompile Include="src\cutsim\AABBTree.cpp" />
+    <ClCompile Include="src\cutsim\CompositeSweep.cpp" />
+    <ClCompile Include="src\cutsim\ConicSweep.cpp" />
+    <ClCompile Include="src\cutsim\CutSim.cpp" />
+    <ClCompile Include="src\cutsim\CutWorkpiece.cpp" />
+    <ClCompile Include="src\cutsim\Move.cpp" />
+    <ClCompile Include="src\cutsim\MoveType.cpp" />
+    <ClCompile Include="src\cutsim\NCFile.cpp" />
+    <ClCompile Include="src\cutsim\Project.cpp" />
+    <ClCompile Include="src\cutsim\ResolutionMode.cpp" />
+    <ClCompile Include="src\cutsim\SpheroidSweep.cpp" />
+    <ClCompile Include="src\cutsim\Sweep.cpp" />
+    <ClCompile Include="src\cutsim\ToolPath.cpp" />
+    <ClCompile Include="src\cutsim\ToolSweep.cpp" />
+    <ClCompile Include="src\cutsim\Workpiece.cpp" />
+    <ClCompile Include="src\dxf\dxflib\dl_dxf.cpp" />
+    <ClCompile Include="src\dxf\dxflib\dl_writer_ascii.cpp" />
+    <ClCompile Include="src\dxf\DXFReader.cpp" />
+    <ClCompile Include="src\gcode\ast\Assign.cpp" />
+    <ClCompile Include="src\gcode\ast\BinaryOp.cpp" />
+    <ClCompile Include="src\gcode\ast\Block.cpp" />
+    <ClCompile Include="src\gcode\ast\Comment.cpp" />
+    <ClCompile Include="src\gcode\ast\FunctionCall.cpp" />
+    <ClCompile Include="src\gcode\ast\NamedReference.cpp" />
+    <ClCompile Include="src\gcode\ast\Number.cpp" />
+    <ClCompile Include="src\gcode\ast\OCode.cpp" />
+    <ClCompile Include="src\gcode\ast\Operator.cpp" />
+    <ClCompile Include="src\gcode\ast\Program.cpp" />
+    <ClCompile Include="src\gcode\ast\QuotedExpr.cpp" />
+    <ClCompile Include="src\gcode\ast\Reference.cpp" />
+    <ClCompile Include="src\gcode\ast\UnaryOp.cpp" />
+    <ClCompile Include="src\gcode\ast\Word.cpp" />
+    <ClCompile Include="src\gcode\Codes.cpp" />
+    <ClCompile Include="src\gcode\Evaluator.cpp" />
+    <ClCompile Include="src\gcode\GCodeInterpreter.cpp" />
+    <ClCompile Include="src\gcode\Interpreter.cpp" />
+    <ClCompile Include="src\gcode\ModalGroup.cpp" />
+    <ClCompile Include="src\gcode\OCodeInterpreter.cpp" />
+    <ClCompile Include="src\gcode\Parser.cpp" />
+    <ClCompile Include="src\gcode\Printer.cpp" />
+    <ClCompile Include="src\gcode\Tokenizer.cpp" />
+    <ClCompile Include="src\gcode\TokenType.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\qt\AboutDialog.cpp" />
+    <ClCompile Include="src\qt\ClickWidget.cpp" />
+    <ClCompile Include="src\qt\CutSimThread.cpp" />
+    <ClCompile Include="src\qt\DonateDialog.cpp" />
+    <ClCompile Include="src\qt\ExportDialog.cpp" />
+    <ClCompile Include="src\qt\FileDialog.cpp" />
+    <ClCompile Include="src\qt\FileTabManager.cpp" />
+    <ClCompile Include="src\qt\GCodeHighlighter.cpp" />
+    <ClCompile Include="src\qt\GLView.cpp" />
+    <ClCompile Include="src\qt\Highlighter.cpp" />
+    <ClCompile Include="src\qt\NCEdit.cpp" />
+    <ClCompile Include="src\qt\NewDialog.cpp" />
+    <ClCompile Include="src\qt\ProjectModel.cpp" />
+    <ClCompile Include="src\qt\QApplication.cpp" />
+    <ClCompile Include="src\qt\QtApp.cpp" />
+    <ClCompile Include="src\qt\QtWin.cpp" />
+    <ClCompile Include="src\qt\SidebarWidget.cpp" />
+    <ClCompile Include="src\qt\SurfaceThread.cpp" />
+    <ClCompile Include="src\qt\ToolPathThread.cpp" />
+    <ClCompile Include="src\qt\TPLHighlighter.cpp" />
+    <ClCompile Include="src\remote\Connection.cpp" />
+    <ClCompile Include="src\remote\ConnectionManager.cpp" />
+    <ClCompile Include="src\render\Renderer.cpp" />
+    <ClCompile Include="src\render\RenderJob.cpp" />
+    <ClCompile Include="src\render\RenderMode.cpp" />
+    <ClCompile Include="src\sim\Controller.cpp" />
+    <ClCompile Include="src\sim\Machine.cpp" />
+    <ClCompile Include="src\sim\Tool.cpp" />
+    <ClCompile Include="src\sim\ToolShape.cpp" />
+    <ClCompile Include="src\sim\ToolTable.cpp" />
+    <ClCompile Include="src\sim\ToolUnits.cpp" />
+    <ClCompile Include="src\stl\STL.cpp" />
+    <ClCompile Include="src\Task.cpp" />
+    <ClCompile Include="src\tplang\Axes.cpp" />
+    <ClCompile Include="src\tplang\ClipperLibrary.cpp" />
+    <ClCompile Include="src\tplang\DXFLibrary.cpp" />
+    <ClCompile Include="src\tplang\GCodeLibrary.cpp" />
+    <ClCompile Include="src\tplang\GCodeMachine.cpp" />
+    <ClCompile Include="src\tplang\Interpreter2.cpp" />
+    <ClCompile Include="src\tplang\Javascript.cpp" />
+    <ClCompile Include="src\tplang\MachineLinearizer.cpp" />
+    <ClCompile Include="src\tplang\MachineMatrix.cpp" />
+    <ClCompile Include="src\tplang\MachinePipeline.cpp" />
+    <ClCompile Include="src\tplang\MachineState.cpp" />
+    <ClCompile Include="src\tplang\MachineUnitAdapter.cpp" />
+    <ClCompile Include="src\tplang\MatrixLibrary.cpp" />
+    <ClCompile Include="src\tplang\MoveSink.cpp" />
+    <ClCompile Include="src\tplang\MoveStream.cpp" />
+    <ClCompile Include="src\tplang\TPLContext.cpp" />
+    <ClCompile Include="src\tplang\TransMatrix.cpp" />
+    <ClCompile Include="src\value\ValueGroup.cpp" />
+    <ClCompile Include="src\value\ValueSet.cpp" />
+    <ClCompile Include="src\view\BoundsView.cpp" />
+    <ClCompile Include="src\view\Color.cpp" />
+    <ClCompile Include="src\view\CuboidView.cpp" />
+    <ClCompile Include="src\view\GL.cpp" />
+    <ClCompile Include="src\view\ToolPathView.cpp" />
+    <ClCompile Include="src\view\ToolView.cpp" />
+    <ClCompile Include="src\view\View.cpp" />
+    <ClCompile Include="src\view\Viewer.cpp" />
+    <ClCompile Include="src\view\ViewPort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\qtwin.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_about_dialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_donate_dialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_export_dialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_new_dialog.h" />
+    <ClInclude Include="GeneratedFiles\ui_qtwin.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\clipper\clipper.hpp" />
+    <ClInclude Include="src\contour\Cell.h" />
+    <ClInclude Include="src\contour\CellSlice.h" />
+    <ClInclude Include="src\contour\CompositeSurface.h" />
+    <ClInclude Include="src\contour\ContourGenerator.h" />
+    <ClInclude Include="src\contour\DualContouring.h" />
+    <ClInclude Include="src\contour\Edge.h" />
+    <ClInclude Include="src\contour\ElementSurface.h" />
+    <ClInclude Include="src\contour\FieldFunction.h" />
+    <ClInclude Include="src\contour\HermiteData.h" />
+    <ClInclude Include="src\contour\HermiteSlice.h" />
+    <ClInclude Include="src\contour\MarchingCubes.h" />
+    <ClInclude Include="src\contour\QEF.h" />
+    <ClInclude Include="src\contour\SampleSlice.h" />
+    <ClInclude Include="src\contour\Surface.h" />
+    <ClInclude Include="src\cutsim\AABB.h" />
+    <ClInclude Include="src\cutsim\AABBTree.h" />
+    <ClInclude Include="src\cutsim\CompositeSweep.h" />
+    <ClInclude Include="src\cutsim\ConicSweep.h" />
+    <ClInclude Include="src\cutsim\CutSim.h" />
+    <ClInclude Include="src\cutsim\CutWorkpiece.h" />
+    <ClInclude Include="src\cutsim\Move.h" />
+    <ClInclude Include="src\cutsim\MoveType.h" />
+    <ClInclude Include="src\cutsim\NCFile.h" />
+    <ClInclude Include="src\cutsim\Project.h" />
+    <ClInclude Include="src\cutsim\ResolutionMode.h" />
+    <ClInclude Include="src\cutsim\SpheroidSweep.h" />
+    <ClInclude Include="src\cutsim\Sweep.h" />
+    <ClInclude Include="src\cutsim\ToolPath.h" />
+    <ClInclude Include="src\cutsim\ToolSweep.h" />
+    <ClInclude Include="src\cutsim\Workpiece.h" />
+    <ClInclude Include="src\dxf\DXFArc.h" />
+    <ClInclude Include="src\dxf\DXFEntity.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_attributes.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_codes.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_creationadapter.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_creationinterface.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_dxf.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_entities.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_exception.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_extrusion.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_writer.h" />
+    <ClInclude Include="src\dxf\dxflib\dl_writer_ascii.h" />
+    <ClInclude Include="src\dxf\DXFLine.h" />
+    <ClInclude Include="src\dxf\DXFPoint.h" />
+    <ClInclude Include="src\dxf\DXFPolyLine.h" />
+    <ClInclude Include="src\dxf\DXFReader.h" />
+    <ClInclude Include="src\dxf\DXFSpline.h" />
+    <ClInclude Include="src\gcode\ast\Assign.h" />
+    <ClInclude Include="src\gcode\ast\BinaryOp.h" />
+    <ClInclude Include="src\gcode\ast\Block.h" />
+    <ClInclude Include="src\gcode\ast\Comment.h" />
+    <ClInclude Include="src\gcode\ast\Entity.h" />
+    <ClInclude Include="src\gcode\ast\FunctionCall.h" />
+    <ClInclude Include="src\gcode\ast\NamedReference.h" />
+    <ClInclude Include="src\gcode\ast\Number.h" />
+    <ClInclude Include="src\gcode\ast\OCode.h" />
+    <ClInclude Include="src\gcode\ast\Operator.h" />
+    <ClInclude Include="src\gcode\ast\Program.h" />
+    <ClInclude Include="src\gcode\ast\QuotedExpr.h" />
+    <ClInclude Include="src\gcode\ast\Reference.h" />
+    <ClInclude Include="src\gcode\ast\UnaryOp.h" />
+    <ClInclude Include="src\gcode\ast\Word.h" />
+    <ClInclude Include="src\gcode\Codes.h" />
+    <ClInclude Include="src\gcode\Evaluator.h" />
+    <ClInclude Include="src\gcode\GCodeInterpreter.h" />
+    <ClInclude Include="src\gcode\Interpreter.h" />
+    <ClInclude Include="src\gcode\ModalGroup.h" />
+    <ClInclude Include="src\gcode\OCodeInterpreter.h" />
+    <ClInclude Include="src\gcode\Parser.h" />
+    <ClInclude Include="src\gcode\Printer.h" />
+    <ClInclude Include="src\gcode\Processor.h" />
+    <ClInclude Include="src\gcode\Token.h" />
+    <ClInclude Include="src\gcode\Tokenizer.h" />
+    <ClInclude Include="src\gcode\TokenType.h" />
+    <ClInclude Include="src\gcode\VarTypes.h" />
+    <ClInclude Include="src\Geom.h" />
+    <CustomBuild Include="src\qt\AboutDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing AboutDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing AboutDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\ClickWidget.h" />
+    <ClInclude Include="src\qt\ColorComponent.h" />
+    <ClInclude Include="src\qt\CutSimThread.h" />
+    <CustomBuild Include="src\qt\DonateDialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing DonateDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing DonateDialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\ExportDialog.h" />
+    <ClInclude Include="src\qt\FileDialog.h" />
+    <CustomBuild Include="src\qt\FileTabManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing FileTabManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing FileTabManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\GCodeHighlighter.h" />
+    <CustomBuild Include="src\qt\GLView.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing GLView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing GLView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\Highlighter.h" />
+    <ClInclude Include="src\qt\LineBuffer.h" />
+    <CustomBuild Include="src\qt\NCEdit.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing NCEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing NCEdit.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\NewDialog.h" />
+    <CustomBuild Include="src\qt\ProjectModel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ProjectModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ProjectModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\QApplication.h" />
+    <ClInclude Include="src\qt\QtApp.h" />
+    <ClInclude Include="src\qt\QTextDevice.h" />
+    <CustomBuild Include="src\qt\QtWin.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing QtWin.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUSING_CBANG -DHAVE_OPENSSL -DHAVE_EXPAT -DXML_STATIC -DBOOST_ALL_NO_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-IC:\Users\gregory\Documents\Visual Studio 2012\Projects\SmartCNController\SmartCNController\src" "-IC:\build\cairo\include" "-IC:\build\freetype\include" "-IC:\build\freetype\include\freetype2" "-IC:\build\v8\depot_tools\v8\include" "-IC:\build\glew-1.12.0\source\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing QtWin.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-IC:\build\cbang\src" "-IC:\build\boost_1_57_0" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+    <ClInclude Include="src\qt\SidebarWidget.h" />
+    <ClInclude Include="src\qt\SurfaceThread.h" />
+    <ClInclude Include="src\qt\ToolPathThread.h" />
+    <ClInclude Include="src\qt\TPLHighlighter.h" />
+    <ClInclude Include="src\Real.h" />
+    <ClInclude Include="src\remote\Connection.h" />
+    <ClInclude Include="src\remote\ConnectionManager.h" />
+    <ClInclude Include="src\render\Renderer.h" />
+    <ClInclude Include="src\render\RenderJob.h" />
+    <ClInclude Include="src\render\RenderMode.h" />
+    <ClInclude Include="src\sim\Addresses.h" />
+    <ClInclude Include="src\sim\Controller.h" />
+    <ClInclude Include="src\sim\CoordinateSystem.h" />
+    <ClInclude Include="src\sim\Machine.h" />
+    <ClInclude Include="src\sim\Tool.h" />
+    <ClInclude Include="src\sim\ToolShape.h" />
+    <ClInclude Include="src\sim\ToolTable.h" />
+    <ClInclude Include="src\sim\ToolUnits.h" />
+    <ClInclude Include="src\stl\Facet.h" />
+    <ClInclude Include="src\stl\STL.h" />
+    <ClInclude Include="src\Task.h" />
+    <ClInclude Include="src\tplang\Axes.h" />
+    <ClInclude Include="src\tplang\ClipperLibrary.h" />
+    <ClInclude Include="src\tplang\DXFLibrary.h" />
+    <ClInclude Include="src\tplang\GCodeLibrary.h" />
+    <ClInclude Include="src\tplang\GCodeMachine.h" />
+    <ClInclude Include="src\tplang\Interpreter2.h" />
+    <ClInclude Include="src\tplang\Javascript.h" />
+    <ClInclude Include="src\tplang\MachineAdapter.h" />
+    <ClInclude Include="src\tplang\MachineEnum.h" />
+    <ClInclude Include="src\tplang\MachineInterface.h" />
+    <ClInclude Include="src\tplang\MachineLinearizer.h" />
+    <ClInclude Include="src\tplang\MachineMatrix.h" />
+    <ClInclude Include="src\tplang\MachinePipeline.h" />
+    <ClInclude Include="src\tplang\MachineState.h" />
+    <ClInclude Include="src\tplang\MachineUnitAdapter.h" />
+    <ClInclude Include="src\tplang\MatrixLibrary.h" />
+    <ClInclude Include="src\tplang\MoveSink.h" />
+    <ClInclude Include="src\tplang\MoveStream.h" />
+    <ClInclude Include="src\tplang\TPLContext.h" />
+    <ClInclude Include="src\tplang\TransMatrix.h" />
+    <ClInclude Include="src\value\MemberFunctorObserver.h" />
+    <ClInclude Include="src\value\MemberFunctorValue.h" />
+    <ClInclude Include="src\value\Observer.h" />
+    <ClInclude Include="src\value\Value.h" />
+    <ClInclude Include="src\value\ValueGroup.h" />
+    <ClInclude Include="src\value\ValueSet.h" />
+    <ClInclude Include="src\value\VarValue.h" />
+    <ClInclude Include="src\view\BoundsView.h" />
+    <ClInclude Include="src\view\Color.h" />
+    <ClInclude Include="src\view\CuboidView.h" />
+    <ClInclude Include="src\view\GL.h" />
+    <ClInclude Include="src\view\ToolPathView.h" />
+    <ClInclude Include="src\view\ToolView.h" />
+    <ClInclude Include="src\view\View.h" />
+    <ClInclude Include="src\view\Viewer.h" />
+    <ClInclude Include="src\view\ViewPort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\qtwin.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\ui\icons\add.png;.\ui\icons\remove.png;.\ui\icons\about.png;.\ui\icons\back.png;.\ui\icons\backward.png;.\ui\icons\bottom.png;.\ui\icons\configure.png;.\ui\icons\end.png;.\ui\icons\export.png;.\ui\icons\faster.png;.\ui\icons\forward.png;.\ui\icons\front.png;.\ui\icons\isometric.png;.\ui\icons\left.png;.\ui\icons\new.png;.\ui\icons\open.png;.\ui\icons\play.png;.\ui\icons\pause.png;.\ui\icons\quit.png;.\ui\icons\restart.png;.\ui\icons\right.png;.\ui\icons\save_as.png;.\ui\icons\save.png;.\ui\icons\slower.png;.\ui\icons\snapshot.png;.\ui\icons\start.png;.\ui\icons\stop.png;.\ui\icons\top.png;.\ui\icons\openscam.png;.\ui\icons\go-left.png;.\ui\icons\go-right.png;.\ui\icons\bbox.png;.\ui\icons\wire.png;.\ui\icons\smooth.png;.\ui\icons\surface.png;.\ui\icons\path.png;.\ui\icons\tool.png;.\ui\icons\axes.png;.\ui\icons\no-surface.png;.\ui\icons\revert.png;.\ui\icons\donate.png;.\ui\images\bitcoin.png;.\ui\images\openscam-bitcoin-donations.png;.\ui\images\paypal_donate.png;.\ui\images\paypal.png;.\ui\icons\cut_surface.png;.\ui\icons\running.gif;.\ui\icons\idle.png;.\ui\icons\help.png;.\ui\icons\clear.png;.\ui\icons\undo.png;.\ui\icons\redo.png;.\ui\icons\cut.png;.\ui\icons\copy.png;.\ui\icons\paste.png;.\ui\icons\select-all.png;.\ui\icons\delete.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\ui\icons\add.png;.\ui\icons\remove.png;.\ui\icons\about.png;.\ui\icons\back.png;.\ui\icons\backward.png;.\ui\icons\bottom.png;.\ui\icons\configure.png;.\ui\icons\end.png;.\ui\icons\export.png;.\ui\icons\faster.png;.\ui\icons\forward.png;.\ui\icons\front.png;.\ui\icons\isometric.png;.\ui\icons\left.png;.\ui\icons\new.png;.\ui\icons\open.png;.\ui\icons\play.png;.\ui\icons\pause.png;.\ui\icons\quit.png;.\ui\icons\restart.png;.\ui\icons\right.png;.\ui\icons\save_as.png;.\ui\icons\save.png;.\ui\icons\slower.png;.\ui\icons\snapshot.png;.\ui\icons\start.png;.\ui\icons\stop.png;.\ui\icons\top.png;.\ui\icons\openscam.png;.\ui\icons\go-left.png;.\ui\icons\go-right.png;.\ui\icons\bbox.png;.\ui\icons\wire.png;.\ui\icons\smooth.png;.\ui\icons\surface.png;.\ui\icons\path.png;.\ui\icons\tool.png;.\ui\icons\axes.png;.\ui\icons\no-surface.png;.\ui\icons\revert.png;.\ui\icons\donate.png;.\ui\images\bitcoin.png;.\ui\images\openscam-bitcoin-donations.png;.\ui\images\paypal_donate.png;.\ui\images\paypal.png;.\ui\icons\cut_surface.png;.\ui\icons\running.gif;.\ui\icons\idle.png;.\ui\icons\help.png;.\ui\icons\clear.png;.\ui\icons\undo.png;.\ui\icons\redo.png;.\ui\icons\cut.png;.\ui\icons\copy.png;.\ui\icons\paste.png;.\ui\icons\select-all.png;.\ui\icons\delete.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ui\icons\about.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\add.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\axes.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\back.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\backward.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\bbox.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\bottom.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\clear.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\configure.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\copy.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\cut.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\cut_surface.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\delete.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\donate.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\end.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\export.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\faster.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\forward.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\front.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\go-left.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\go-right.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\help.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\idle.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\isometric.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\left.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\new.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\no-surface.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\open.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\openscam.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\paste.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\path.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\pause.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\play.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\quit.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\redo.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\remove.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\restart.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\revert.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\right.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\running.gif">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\save.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\save_as.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\select-all.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\slower.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\smooth.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\snapshot.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\start.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\stop.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\surface.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\tool.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\top.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\undo.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\icons\wire.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\images\bitcoin.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\images\openscam-bitcoin-donations.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\images\paypal.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="ui\images\paypal_donate.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\about_dialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\donate_dialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\export_dialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\new_dialog.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" MocDir=".\GeneratedFiles\$(ConfigurationName)" MocOptions="" RccDir=".\GeneratedFiles" lupdateOnBuild="0" lupdateOptions="" lreleaseOptions="" Qt5Version_x0020_Win32="QT5" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
